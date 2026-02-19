@@ -1,0 +1,269 @@
+/* Main App Container */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+/* Navigation Enhancements */
+.navbar-dark {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,.3);
+  padding: 0.8rem 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffd700 !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-logo {
+  height: 45px;
+  width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  padding: 8px 16px !important;
+  margin: 0 4px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: #ffd700 !important;
+  transform: translateY(-2px);
+}
+
+/* Container Styling */
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,.2);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+h1 {
+  border-bottom: 4px solid #667eea;
+  padding-bottom: 0.5rem;
+  color: #2a5298;
+}
+
+h2 {
+  border-bottom: 3px solid #764ba2;
+  padding-bottom: 0.5rem;
+  color: #1e3c72;
+}
+
+/* Table Styling */
+.table {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border: none;
+  padding: 1rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(102, 126, 234, 0.08);
+}
+
+.table-hover tbody tr:hover {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(248,249,250,1) 100%);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.3);
+}
+
+.card-title {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Button Styling */
+.btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  border-radius: 8px;
+  padding: 10px 24px;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #65388b 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  box-shadow: 0 4px 8px rgba(17, 153, 142, 0.3);
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #0e847a 0%, #2dd36b 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(17, 153, 142, 0.4);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 8px rgba(240, 147, 251, 0.3);
+  color: white;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, #de7fe9 0%, #e3445a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(240, 147, 251, 0.4);
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-sm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Badge Styling */
+.badge {
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Loading and Error States */
+.loading, .error {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.loading {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+/* Home Page Styling */
+.home-welcome {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.home-welcome h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-welcome p {
+  font-size: 1.2rem;
+  color: #1e3c72;
+  font-weight: 500;
+}
+
+/* Rank Badges */
+.rank-badge {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rank-1 {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: white;
+}
+
+.rank-2 {
+  background: linear-gradient(135deg, #C0C0C0, #808080);
+  color: white;
+}
+
+.rank-3 {
+  background: linear-gradient(135deg, #CD7F32, #8B4513);
+  color: white;
+}
