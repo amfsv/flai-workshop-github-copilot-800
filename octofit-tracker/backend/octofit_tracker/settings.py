@@ -30,6 +30,11 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 if os.environ.get('CODESPACE_NAME'):
     ALLOWED_HOSTS.append(f"{os.environ.get('CODESPACE_NAME')}-8000.app.github.dev")
 
+# CSRF trusted origins for Codespace
+CSRF_TRUSTED_ORIGINS = []
+if os.environ.get('CODESPACE_NAME'):
+    CSRF_TRUSTED_ORIGINS.append(f"https://{os.environ.get('CODESPACE_NAME')}-8000.app.github.dev")
+
 
 # Application definition
 
@@ -156,3 +161,12 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
+
+# Force HTTPS and codespace URLs in API responses
+if os.environ.get('CODESPACE_NAME'):
+    # Trust X-Forwarded-Proto header from GitHub Codespaces
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    # Use X-Forwarded-Host header
+    USE_X_FORWARDED_HOST = True
+    # Force HTTPS scheme in generated URLs
+    os.environ['HTTPS'] = 'on'
